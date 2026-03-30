@@ -225,9 +225,9 @@ public sealed class ZadaniaLinq
     /// </summary>
     public IEnumerable<string> Zadanie12_ParyStudentPrzedmiot()
     {
-        var exerciseTwelve = from zapis in DaneUczelni.Zapisy 
-            join student in DaneUczelni.Studenci on zapis.StudentId equals student.Id
-            join przedmiot in DaneUczelni.Przedmioty on zapis.PrzedmiotId equals przedmiot.Id
+        var exerciseTwelve = from zapis in DaneUczelni.Zapisy
+            from student in DaneUczelni.Studenci.Where(s => s.Id == zapis.StudentId)
+            from przedmiot in DaneUczelni.Przedmioty.Where(p => p.Id == zapis.PrzedmiotId)
             select $"{student.Imie} {student.Nazwisko} | {przedmiot.Nazwa}";
 
         return exerciseTwelve;
