@@ -6,7 +6,7 @@ public sealed class ZadaniaLinq
 {
     /// <summary>
     /// Zadanie:
-    /// Wyszukaj wszystkich studentów mieszkających w Warsaw.
+    /// Wyszuk aj wszystkich studentów mieszkających w Warsaw.
     /// Zwróć numer indeksu, pełne imię i nazwisko oraz miasto.
     ///
     /// SQL:
